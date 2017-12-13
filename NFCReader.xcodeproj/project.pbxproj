@@ -10,7 +10,6 @@
 		699D7574870262454352798B /* Pods_NFCReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CF4ED89F1A067F528A0758 /* Pods_NFCReaderUITests.framework */; };
 		DB4D88901FE1956400A83257 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D888F1FE1956400A83257 /* AppDelegate.swift */; };
 		DB4D88921FE1956400A83257 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D88911FE1956400A83257 /* ViewController.swift */; };
-		DB4D88951FE1956400A83257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4D88931FE1956400A83257 /* Main.storyboard */; };
 		DB4D88971FE1956400A83257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4D88961FE1956400A83257 /* Assets.xcassets */; };
 		DB4D889A1FE1956400A83257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4D88981FE1956400A83257 /* LaunchScreen.storyboard */; };
 		DB4D88A51FE1956500A83257 /* NFCReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D88A41FE1956500A83257 /* NFCReaderTests.swift */; };
@@ -49,7 +48,6 @@
 		DB4D888C1FE1956400A83257 /* NFCReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D888F1FE1956400A83257 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB4D88911FE1956400A83257 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB4D88941FE1956400A83257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB4D88961FE1956400A83257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4D88991FE1956400A83257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB4D889B1FE1956400A83257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +57,7 @@
 		DB4D88AB1FE1956500A83257 /* NFCReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFCReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D88AF1FE1956500A83257 /* NFCReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderUITests.swift; sourceTree = "<group>"; };
 		DB4D88B11FE1956500A83257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB4D88BD1FE199A600A83257 /* NFCReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCReader.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +136,9 @@
 		DB4D888E1FE1956400A83257 /* NFCReader */ = {
 			isa = PBXGroup;
 			children = (
+				DB4D88BD1FE199A600A83257 /* NFCReader.entitlements */,
 				DB4D888F1FE1956400A83257 /* AppDelegate.swift */,
 				DB4D88911FE1956400A83257 /* ViewController.swift */,
-				DB4D88931FE1956400A83257 /* Main.storyboard */,
 				DB4D88961FE1956400A83257 /* Assets.xcassets */,
 				DB4D88981FE1956400A83257 /* LaunchScreen.storyboard */,
 				DB4D889B1FE1956400A83257 /* Info.plist */,
@@ -243,6 +242,11 @@
 					DB4D888B1FE1956400A83257 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 					DB4D889F1FE1956500A83257 = {
 						CreatedOnToolsVersion = 9.2;
@@ -283,7 +287,6 @@
 			files = (
 				DB4D889A1FE1956400A83257 /* LaunchScreen.storyboard in Resources */,
 				DB4D88971FE1956400A83257 /* Assets.xcassets in Resources */,
-				DB4D88951FE1956400A83257 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,14 +498,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB4D88931FE1956400A83257 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB4D88941FE1956400A83257 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB4D88981FE1956400A83257 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -626,9 +621,11 @@
 			baseConfigurationReference = 68353FAC40FFAFBBB47EFE72 /* Pods-NFCReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCReader/NFCReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = NFCReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakarin0528.NFCReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,9 +639,11 @@
 			baseConfigurationReference = 31DC4E6119CD64578A7A0D61 /* Pods-NFCReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCReader/NFCReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 922P3K9888;
 				INFOPLIST_FILE = NFCReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nakarin0528.NFCReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
